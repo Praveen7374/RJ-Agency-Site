@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RJ Marketing & Media</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <!-- Apni CSS file link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a class="nav-logo" onclick="scrollTo('#home')">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <span class="bold">RJ</span><span class="light">Marketing & Media</span>
+      </a>
+      <div class="nav-links">
+        <a onclick="scrollToSection('#home')">Home</a>
+        <a onclick="scrollToSection('#services')">Services</a>
+        <a onclick="scrollToSection('#about')">About</a>
+        <a onclick="scrollToSection('#portfolio')">Portfolio</a>
+        <a onclick="scrollToSection('#contact')">Contact</a>
+        <span class="btn-signin" onclick="openLogin()">Sign In</span>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <svg id="menu-icon" viewBox="0 0 24 24">
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a onclick="scrollToSection('#home')">Home</a>
+    <a onclick="scrollToSection('#services')">Services</a>
+    <a onclick="scrollToSection('#about')">About</a>
+    <a onclick="scrollToSection('#portfolio')">Portfolio</a>
+    <a onclick="scrollToSection('#contact')">Contact</a>
+    <span class="btn-signin" style="text-align:center;margin-top:0.75rem;">Sign In</span>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="home">
+  <div class="hero-bg">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-inner container">
+    <div class="hero-grid-layout">
+      <!-- Left -->
+      <div>
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>#1 Marketing Agency</span>
+        </div>
+        <h1 class="hero-title">
+          Grow Your Business<br>
+          <span class="gradient-text-blue">With RJ Marketing</span><br>
+          &amp; Media
+        </h1>
+        <p class="hero-desc">
+          We craft digital experiences that captivate audiences, drive engagement,
+          and accelerate your brand's growth. From social media to stunning websites — we do it all.
+        </p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="scrollToSection('#contact')">
+            Get Started
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('#services')">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Our Services
+          </button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><p>200+</p><p>Projects Done</p></div>
+          <div class="stat-item"><p>50+</p><p>Happy Clients</p></div>
+          <div class="stat-item"><p>5+</p><p>Years Experience</p></div>
+        </div>
+      </div>
+      <!-- Right Image -->
+      <div class="hero-image-wrap">
+        <div class="hero-img" style="position:relative;">
+          <img src="https://media.base44.com/images/public/69b0fe4903ac07d3dfad9165/a494add60_generated_580eedb2.png" alt="RJ Marketing & Media digital workspace" loading="lazy"/>
+        </div>
+        <div class="hero-float-card">
+          <div class="float-dot-wrap"><div class="float-dot"></div></div>
+          <div class="float-text">
+            <p>+127% Growth</p>
+            <p>Client Average ROI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+  <div class="services-bg"><div class="services-blob"></div></div>
+  <div class="container" style="position:relative;z-index:10;">
+    <div class="section-header fade-up">
+      <span class="badge" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);color:var(--blue-400);">What We Offer</span>
+      <h2>Our <span class="gradient-text-blue">Premium</span> Services</h2>
+      <p>Comprehensive marketing and media solutions tailored to elevate your brand and drive measurable results.</p>
+    </div>
+    <div class="services-grid" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="about-blob"></div>
+  <div class="container" style="position:relative;z-index:10;">
+    <div class="about-grid">
+      <div class="fade-left">
+        <span class="badge about-badge">About Us</span>
+        <h2 class="about-title">We Turn Ideas Into<br><span class="gradient-text-purple">Digital Success</span></h2>
+        <p class="about-desc">RJ Marketing &amp; Media is a full-service digital marketing agency dedicated to helping businesses grow their online presence and achieve real, measurable results.</p>
+        <p class="about-desc2">With a team of creative strategists, designers, developers, and marketing experts, we bring a holistic approach to every project. From social media management to professional videography — we've got you covered.</p>
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <span>Award-Winning Work</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+            <span>Data-Driven Results</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <span>Client-First Approach</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <span>100% Transparency</span>
+          </div>
+        </div>
+      </div>
+      <div class="stats-grid fade-right">
+        <div class="stat-card stat-blue"><p>200+</p><p>Projects Completed</p></div>
+        <div class="stat-card stat-purple"><p>50+</p><p>Happy Clients</p></div>
+        <div class="stat-card stat-emerald"><p>5+</p><p>Years Experience</p></div>
+        <div class="stat-card stat-orange"><p>98%</p><p>Client Retention</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PORTFOLIO ═══ -->
+<section id="portfolio">
+  <div class="portfolio-blob"></div>
+  <div class="container" style="position:relative;z-index:10;">
+    <div class="section-header fade-up">
+      <span class="badge" style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.2);color:var(--cyan-400);">Our Work</span>
+      <h2>Featured <span class="gradient-text-cyan">Portfolio</span></h2>
+      <p>A glimpse into the projects that drive results for our clients.</p>
+    </div>
+    <div class="portfolio-grid" id="portfolio-grid"></div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="contact-blob"></div>
+  <div class="container" style="position:relative;z-index:10;">
+    <div class="section-header fade-up">
+      <span class="badge" style="background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.2);color:var(--green-400);">Get In Touch</span>
+      <h2>Let's <span class="gradient-text-green">Work Together</span></h2>
+      <p>Ready to take your brand to the next level? Fill out the form and we'll get back to you within 24 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="fade-left">
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>Have a question or want to discuss a project? Reach out to us through any of these channels.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.36a16 16 0 0 0 5.55 5.55l1.42-1.42a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div><p class="contact-item-label">Phone</p><p class="contact-item-val">+91 6367556046</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><p class="contact-item-label">Email</p><p class="contact-item-val">rjmarketingmedia@gmail.com.com</p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><p class="contact-item-label">Address</p><p class="contact-item-val">Sikar, Rajasthan, India</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-right">
+        <div class="contact-form-wrap" id="contact-form-wrap">
+          <form id="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="name" placeholder=" your Name" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="+91 *********" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" name="email" placeholder="john@example.com" required />
+              </div>
+              <div class="form-group">
+                <label>Service Required *</label>
+                <select name="service" required>
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="social_media">Social Media Services</option>
+                  <option value="digital_marketing">Digital Marketing</option>
+                  <option value="website_development">Website Development</option>
+                  <option value="photography">Photography &amp; Videography</option>
+                  <option value="model_providing">Model Providing Service</option>
+                  <option value="Influencer_Marketing">Influencer Marketing</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" placeholder="Tell us about your project..." rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="submit-btn">
+              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-cta-wrap">
+    <div class="footer-cta">
+      <div class="footer-cta-blob1"></div>
+      <div class="footer-cta-blob2"></div>
+      <div class="footer-cta-inner">
+        <div>
+          <h3>Ready to Grow Your Business?</h3>
+          <p>Let's create something amazing together. Get a free consultation today.</p>
+        </div>
+        <button class="btn-cta" onclick="scrollTo('#contact')">
+          Get Free Consultation
+          <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="cursor:default;">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" style="stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;width:20px;height:20px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <span class="bold">RJ</span><span class="light">Marketing & Media </span>
+        </div>
+        <p>We are a full-service digital marketing and media agency helping businesses grow their online presence and achieve real, measurable results.</p>
+        <div class="socials">
+          <a class="social-btn" href="https://www.facebook.com/share/18LbHkdDwG/" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a class="social-btn" href="https://wa.me/916367556046" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0C5.49 0 .13 5.36.13 11.93c0 2.1.55 4.14 1.6 5.94L0 24l6.32-1.66a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.92-5.36 11.92-11.93 0-3.18-1.24-6.17-3.46-8.39zM12.05 21.6h-.01a9.7 9.7 0 0 1-4.95-1.36l-.35-.21-3.75.99 1-3.65-.23-.37a9.66 9.66 0 0 1-1.48-5.15c0-5.35 4.35-9.7 9.7-9.7 2.59 0 5.03 1.01 6.86 2.84a9.63 9.63 0 0 1 2.84 6.86c0 5.35-4.35 9.7-9.7 9.7zm5.3-7.27c-.29-.14-1.72-.85-1.98-.95-.26-.1-.45-.14-.64.14-.19.29-.74.95-.9 1.14-.17.19-.33.21-.62.07-.29-.14-1.22-.45-2.32-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.12-.59.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.1-.23-.55-.47-.47-.64-.48-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 1-.97 2.44.03 1.44 1.04 2.83 1.18 3.02.14.19 2.04 3.12 4.95 4.37.69.3 1.22.48 1.63.62.68.22 1.3.19 1.79.12.55-.08 1.72-.7 1.96-1.38.24-.67.24-1.25.17-1.38-.07-.12-.26-.19-.55-.33z"/></svg></a>
+          <a class="social-btn" href="https://www.instagram.com/rj_marketing_company?igsh=MW94M3VxOGhtcHhnZw==" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a class="social-btn" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          <a class="social-btn" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          
+          <li><button onclick="sscrollToSection('#home')">Home</button></li>
+          <li><button onclick="scrollToSection('#services')">Services</button></li>
+          <li><button onclick="scrollToSection('#about')">About Us</button></li>
+          <li><button onclick="scrollToSection('#portfolio')">Portfolio</button></li>
+          <li><button onclick="scrollToSection('#contact')">Contact</button></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Social Media Management</a></li>
+          <li><a href="#">Digital Marketing</a></li>
+          <li><a href="#">Website Development</a></li>
+          <li><a href="#">Photography &amp; Videography</a></li>
+          <li><a href="#">Model Providing</a></li>
+          <li><a href="#">Influencer Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.36a16 16 0 0 0 5.55 5.55l1.42-1.42a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91 6367556046</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>rjmarketingmedia.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Sikar, Rajasthan , India</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> RJ Marketing Media &amp; Media. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <span>Privacy Policy</span>
+        <span>Terms of Service</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Apni JS file link -->
+<script src="script.js"></script>
+</body>
+</html>
